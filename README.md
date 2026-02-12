@@ -5,3 +5,4 @@ Utilizes rospy libraries for navigation and standard Python libraries for odomet
 
 # Example videos
 [![Adding new waypoints live](data/mission_attempt_thumbnail.png)](https://youtu.be/fVmHJGxYP4k)
+[![AMCL Localization](data/mission_attempt_thumbnail.png)](https://youtu.be/fyRV9pePyHU)
