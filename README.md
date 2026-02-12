@@ -4,3 +4,4 @@ Branches are for each stage of the project. Main branch is the most up-to-date w
 Utilizes rospy libraries for navigation and standard Python libraries for odometry calculations. In addition, OpenCV2 libraries for object recognition and camera calibration.
 
 # Example videos
+[![Adding new waypoints live](https://raw.githubusercontent.com/zafoddiy/turtlebot-project/simulation_mapping/data/mission_attempt_thumbnail.png)](https://raw.githubusercontent.com/zafoddiy/branch/path/to/video.mp4)
