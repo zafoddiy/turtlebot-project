@@ -1,14 +1,8 @@
 #!/usr/bin/env python3
 
 """
-Solution to home assignment 7 (Robot Control). Node to take a set of
-waypoints and to drive a differential drive robot through those waypoints
-using a simple PD controller and provided odometry data.
-
 @author: Elias Sepp
 @date: 04.11.24
-@input: Odometry as nav_msgs Odometry message
-@output: body velocity commands as geometry_msgs Twist message.
 """
 
 import math
@@ -25,7 +19,7 @@ from tf_transformations import euler_from_quaternion
 
 class PDController(Node):
     def __init__(self):
-        # Your code here
+        
         super().__init__('controller')
 
         # Wait for run other nodes
@@ -98,16 +92,11 @@ class PDController(Node):
     def wrapAngle(self, angle):
         """
         Helper function that returns angle wrapped between +- Pi.
-        Hint: Pass your error in heading [rad] into this function, and it
-        returns the shorter angle. This prevents your robot from turning
-        along the wider angle and makes it turn along the smaller angle (but
-        in opposite direction) instead.
         @param: self
         @param: angle - angle to be wrapped in [rad]
         @result: returns wrapped angle -Pi <= angle <= Pi
         """
 
-        # TODO: Your code here
         if angle > math.pi:
             corr_angle = angle - 2 * math.pi
         elif angle < -math.pi:
@@ -128,7 +117,6 @@ class PDController(Node):
             self.error_change_rate[0] + self.Ki[0] * self.error_integral[0]
         self.vel_cmd[1] = self.Kp[1] * self.error[1] + self.Kd[1] * \
             self.error_change_rate[1] + self.Ki[1] * self.error_integral[1]
-        # Your code here
 
     def publishWaypoints(self):
         """
@@ -165,7 +153,7 @@ class PDController(Node):
         @result: updates self.error, self.error_change_rate, self.th_diff and
                  self.pos_diff
         """
-        # Your code here
+        
         try:
             self.pos_diff = [self.waypoints[0][0] -
                              self.pos[0], self.waypoints[0][1] - self.pos[1]]
