@@ -1,14 +1,8 @@
 #!/usr/bin/env python3
 
 """
-Solution to home assignment 7 (Robot Control). Node to take a set of
-waypoints and to drive a differential drive robot through those waypoints
-using a simple PD controller and provided odometry data.
-
 @author: Elias Sepp
 @date: 06.12.24
-@input: Odometry as nav_msgs Odometry message
-@output: body velocity commands as geometry_msgs Twist message.
 """
 
 import math
