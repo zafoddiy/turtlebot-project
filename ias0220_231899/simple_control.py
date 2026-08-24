@@ -23,7 +23,7 @@ from tf2_ros.transform_listener import TransformListener
 
 class PDController(Node):
     def __init__(self):
-        # Your code here
+        
         super().__init__('controller')
 
         # Wait for run other nodes
@@ -101,10 +101,6 @@ class PDController(Node):
     def wrapAngle(self, angle):
         """
         Helper function that returns angle wrapped between +- Pi.
-        Hint: Pass your error in heading [rad] into this function, and it
-        returns the shorter angle. This prevents your robot from turning
-        along the wider angle and makes it turn along the smaller angle (but
-        in opposite direction) instead.
         @param: self
         @param: angle - angle to be wrapped in [rad]
         @result: returns wrapped angle -Pi <= angle <= Pi
@@ -162,7 +158,7 @@ class PDController(Node):
         @result: updates self.error, self.error_change_rate, self.th_diff and
                  self.pos_diff
         """
-        # Your code here
+        
         self.prev_error = self.error
         if self.waypoints.size != 0:
             vector = self.waypoints[0] - self.pos
